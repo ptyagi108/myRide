@@ -30,7 +30,7 @@
 
     <jsp:include page="/WEB-INF/jspf/header.jsp"><jsp:param name="section" value="home" /></jsp:include>
 
-    <h1>Willkommen im OpenRide-Adminbereich</h1>
+    <h1>Welcome to Open Ride admin</h1>
 
     <%--jsp:include page="/WEB-INF/jspf/welcome_registration.jsp"></jsp:include--%>
 

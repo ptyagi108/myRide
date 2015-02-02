@@ -31,20 +31,20 @@
     <jsp:include page="/WEB-INF/jspf/header.jsp"><jsp:param name="section" value="monitoring" /></jsp:include>
 
     <h:form id="logoutForm">
-        <div style="float: right; margin-top: 4px;"><h:commandLink action="#{Welcome_Backing.logout}" immediate="true"><h:outputText value="Ausloggen" /></h:commandLink></div>
+        <div style="float: right; margin-top: 4px;"><h:commandLink action="#{Welcome_Backing.logout}" immediate="true"><h:outputText value="log out" /></h:commandLink></div>
         <h1><h1>Monitoring</h1></h1>
     </h:form>
 
     <h:form id="form">
 
-        <f:verbatim><fieldset><legend>Benutzer</legend></f:verbatim>
+        <f:verbatim><fieldset><legend>user</legend></f:verbatim>
         <div style="padding: 10px 15px;">
             <h:panelGrid columns="2" columnClasses="monitoringCol1,monitoringCol2">
-                <h:outputText value="Registrierte Benutzer:" />
+                <h:outputText value="Registered users:" />
                 <h:outputText value="#{Monitoring.users}" />
-                <h:outputText value="Heute registrierte Benutzer:" />
+                <h:outputText value="Today registered user:" />
                 <h:outputText value="#{Monitoring.registrationsToday}" />
-                <h:outputText value="Aktivste Fahrer" />
+                <h:outputText value="Most Active driver" />
                 <h:outputText value="not implemented yet" />
             </h:panelGrid>
         </div>
@@ -52,12 +52,12 @@
 
         <h:panelGrid columns="2">
             <h:panelGroup>
-                <f:verbatim><fieldset><legend>Gesuche</legend></f:verbatim>
+                <f:verbatim><fieldset><legend>Requests</legend></f:verbatim>
                 <div style="padding: 10px 15px;">
                     <h:panelGrid columns="2" columnClasses="monitoringCol1,monitoringCol2">
-                        <h:outputText value="Alle Gesuche:" />
+                        <h:outputText value="All requests:" />
                         <h:outputText value="#{Monitoring.searchesAll}" />
-                        <h:outputText value="Gesuche heute:" />
+                        <h:outputText value="Requests today:" />
                         <h:outputText value="#{Monitoring.searchesToday}" />
                     </h:panelGrid>
                 </div>
@@ -65,12 +65,12 @@
             </h:panelGroup>
 
             <h:panelGroup>
-                <f:verbatim><fieldset><legend>Angebote</legend></f:verbatim>
+                <f:verbatim><fieldset><legend>offers</legend></f:verbatim>
                 <div style="padding: 10px 15px;">
                     <h:panelGrid columns="2" columnClasses="monitoringCol1,monitoringCol2">
-                        <h:outputText value="Alle Angebote" />
+                        <h:outputText value="All deals" />
                         <h:outputText value="#{Monitoring.offersAll}" />
-                        <h:outputText value="Angebote heute:" />
+                        <h:outputText value="Offers today:" />
                         <h:outputText value="#{Monitoring.offersToday}" />
                     </h:panelGrid>
                 </div>
@@ -78,12 +78,12 @@
             </h:panelGroup>
 
             <h:panelGroup>
-                <f:verbatim><fieldset><legend>Buchungen</legend></f:verbatim>
+                <f:verbatim><fieldset><legend>Reservations</legend></f:verbatim>
                 <div style="padding: 10px 15px;">
                     <h:panelGrid columns="2" columnClasses="monitoringCol1,monitoringCol2">
-                        <h:outputText value="Alle Buchungen" />
+                        <h:outputText value="All bookings" />
                         <h:outputText value="#{Monitoring.bookingsAll}" />
-                        <h:outputText value="Buchungen heute:" />
+                        <h:outputText value="Known today:" />
                         <h:outputText value="#{Monitoring.bookingsToday}"/>
                     </h:panelGrid>
                 </div>
@@ -96,7 +96,7 @@
                     <h:panelGrid columns="2" columnClasses="monitoringCol1,monitoringCol2">
                         <h:outputText value="Alle Matches:" />
                         <h:outputText value="#{Monitoring.matchesAll}" />
-                        <h:outputText value="Matches heute:" />
+                        <h:outputText value="matches today:" />
                         <h:outputText value="#{Monitoring.matchesToday}" />
                     </h:panelGrid>
                 </div>

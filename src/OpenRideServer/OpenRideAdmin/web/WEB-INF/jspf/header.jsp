@@ -45,8 +45,8 @@
     <div id="menu">
         <ul>
             <li<c:if test="${param.section=='home'}"> class="active" </c:if>><a href="./">Home</a></li>
-            <li<c:if test="${param.section=='regpasses'}"> class="active" </c:if>><a href="registration_passes.jsf">Neue Passcodes</a></li>
-            <li<c:if test="${param.section=='regpasses_used'}"> class="active" </c:if>><a href="registration_passes_used.jsf">Vergebene Passcodes</a></li>
+            <li<c:if test="${param.section=='regpasses'}"> class="active" </c:if>><a href="registration_passes.jsf">New passcode</a></li>
+            <li<c:if test="${param.section=='regpasses_used'}"> class="active" </c:if>><a href="registration_passes_used.jsf">Assigned passcode</a></li>
             <li<c:if test="${param.section=='monitoring'}"> class="active" </c:if>><a href="monitoring.jsf">Monitoring</a></li>
         </ul>
     </div>

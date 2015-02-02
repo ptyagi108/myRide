@@ -29,7 +29,7 @@
 
     <jsp:include page="/WEB-INF/jspf/header.jsp"><jsp:param name="section" value="home" /></jsp:include>
 
-    <h1>Willkommen im OpenRide-Adminbereich</h1>
+    <h1>Welcome to Open Ride admin</h1>
 
     <%--jsp:include page="/WEB-INF/jspf/welcome_registration.jsp"></jsp:include--%>
 
@@ -37,7 +37,7 @@
 
     <%--jsp:include page="/WEB-INF/jspf/welcome_partners.jsp"></jsp:include--%>
 
-    <!--p>Was möchtest du tun?</p>
+    <!--p>What do you want?</p>
 
     <ul>
         <li><a href="registration_passes.jsf">Neue Registrierungscodes generieren</a></li>

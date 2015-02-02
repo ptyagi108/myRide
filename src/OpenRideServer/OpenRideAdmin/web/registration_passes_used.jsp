@@ -31,13 +31,13 @@
     <jsp:include page="/WEB-INF/jspf/header.jsp"><jsp:param name="section" value="regpasses_used" /></jsp:include>
 
     <h:form id="logoutForm">
-        <div style="float: right; margin-top: 4px;"><h:commandLink action="#{Welcome_Backing.logout}" immediate="true"><h:outputText value="Ausloggen" /></h:commandLink></div>
-        <h1>Vergebene Passcodes</h1>
+        <div style="float: right; margin-top: 4px;"><h:commandLink action="#{Welcome_Backing.logout}" immediate="true"><h:outputText value="log out" /></h:commandLink></div>
+        <h1>Assigned passcode</h1>
     </h:form>
 
     <h:form id="form">
         <f:verbatim><fieldset>
-                <legend>Zuletzt registrierte Benutzer mit initialem Passwort:</legend></f:verbatim>
+                <legend>Last registered users with an initial password:</legend></f:verbatim>
 
                 <div  style="padding: 10px 15px;">
 
@@ -45,19 +45,19 @@
 
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Datum" style="font-weight: bold;" />
+                            <h:outputText value="date" style="font-weight: bold;" />
                         </f:facet>
                         <h:outputText value="#{pass.usageDate}"><f:convertDateTime pattern="dd.MM.yyyy" /></h:outputText>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Nachname" style="font-weight: bold;" />
+                            <h:outputText value="Last Name" style="font-weight: bold;" />
                         </f:facet>
                         <h:outputText value="#{pass.custId.custLastname}"></h:outputText>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Vorname" style="font-weight: bold;" />
+                            <h:outputText value="first name" style="font-weight: bold;" />
                         </f:facet>
                         <h:outputText value="#{pass.custId.custFirstname}"></h:outputText>
                     </h:column>
@@ -69,15 +69,15 @@
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Benutzername" style="font-weight: bold;" />
+                            <h:outputText value="user name" style="font-weight: bold;" />
                         </f:facet>
                         <h:outputText value="#{pass.custId.custNickname}"></h:outputText>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Passwort" style="font-weight: bold;" />
+                            <h:outputText value="Password" style="font-weight: bold;" />
                         </f:facet>
-                        <a href="mailto:<h:outputText value="#{pass.custId.custEmail}"></h:outputText>?subject=Dein Passwort für OpenRide&body=Lieber OpenRide-Nutzer, liebe OpenRide-Nutzerin,%0A%0Aes freut uns, dass Du an der OpenRide-Pilotierung der Zeppelin Universität teilnimmst!%0A%0ADein Benutzername ist:%0A%0A<h:outputText value="#{pass.custId.custNickname}"></h:outputText>%0A%0ADein initiales Passwort für OpenRide lautet:%0A%0A<h:outputText value="#{pass.passcode}"></h:outputText>%0A%0AWir empfehlen, das Passwort nach dem ersten Einloggen zu ändern!%0A%0AUnd hier der Link zur Anwendung: https://www.open-ride.mobi/%0A%0AEine Anleitung findest Du nach dem Einloggen über die Desktop-Anwendung in Deinem persönlichen Bereich:%0A%0Ahttps://www.open-ride.mobi/OpenRideWeb/%0A%0AMit freundlichen Grüßen,%0ADein OpenRide-Team"><h:outputText value="#{pass.passcode}"></h:outputText></a>
+                        <a href="mailto:<h:outputText value="#{pass.custId.custEmail}"></h:outputText>?subject=Your password for open Ride & body = Dear Open-Ride users love Open Ride Licensees,%0A%0Aes pleased that you participate in the Open Ride piloting the Zeppelin University!%0A%0ADein Benutzername ist:%0A%0A<h:outputText value="#{pass.custId.custNickname}"></h:outputText>%0A%0ADein initiales Passwort für OpenRide lautet:%0A%0A<h:outputText value="#{pass.passcode}"></h:outputText>%0A%0AWir empfehlen, das Passwort nach dem ersten Einloggen zu ändern!%0A%0AUnd hier der Link zur Anwendung: https://www.open-ride.mobi/%0A%0AEine Anleitung findest Du nach dem Einloggen über die Desktop-Anwendung in Deinem persönlichen Bereich:%0A%0Ahttps://www.open-ride.mobi/OpenRideWeb/%0A%0AMit freundlichen Grüßen,%0ADein OpenRide-Team"><h:outputText value="#{pass.passcode}"></h:outputText></a>
                     </h:column>
 
                 </h:dataTable>

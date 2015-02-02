@@ -26,21 +26,21 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
     <fieldset style="min-height: 150px;">
-        <legend>Du bist Administrator?</legend>
+        <legend>You are an administrator?</legend>
 
-        <p>Logge Dich ein, um zum Adminbereich zu gelangen.</p>
+        <p>Log in register in order to access the admin area.</p>
 
         <form id="loginForm" action="j_security_check" method="post">
             <table border="0" width="100%">
                 <tbody>
                     <tr>
-                        <td class="column33"><label for="j_username" class="requiredField">Benutzername:</label> <span class="requiredField">(*)</span></td>
+                        <td class="column33"><label for="j_username" class="requiredField">Login:</label> <span class="requiredField">(*)</span></td>
                         <td class="column66"><input id="j_username" type="text" name="j_username" class="wide" /></td>
                     </tr>
                     <tr>
-                        <td class="column33"><label for="j_password" class="requiredField">Passwort:</label> <span class="requiredField">(*)</span></td>
+                        <td class="column33"><label for="j_password" class="requiredField">password:</label> <span class="requiredField">(*)</span></td>
                         <td class="column66"><input id="j_password" type="password" name="j_password" value="" class="wide" />
-                        <c:if test="${param.login_error=='true'}"><span class="error">Ungültige Zugangsdaten.</span></c:if></td>
+                        <c:if test="${param.login_error=='true'}"><span class="error">Invalid credentials.</span></c:if></td>
                     </tr>
                     <tr>
                         <td class="column33">&nbsp;</td>
@@ -54,7 +54,7 @@
             <h:panelGrid width="100%" columns="2" columnClasses="column33,column66" border="0">
 
                 <h:panelGroup>
-                    <h:outputLabel value="Benutzername:" for="username" styleClass="requiredField" />
+                    <h:outputLabel value="User name:" for="username" styleClass="requiredField" />
                     <span class="requiredField">(*)</span>
                 </h:panelGroup>
                 <h:panelGroup>
@@ -63,7 +63,7 @@
                 </h:panelGroup>
 
                 <h:panelGroup>
-                    <h:outputLabel value="Passwort:" for="password" styleClass="requiredField" />
+                    <h:outputLabel value="Password:" for="password" styleClass="requiredField" />
                     <span class="requiredField">(*)</span>
                 </h:panelGroup>
                 <h:panelGroup>
@@ -73,7 +73,7 @@
                 </h:panelGroup>
 
                 <f:verbatim>&nbsp;</f:verbatim>
-                <h:commandButton value="Einloggen" action="#{Welcome_Backing.login}" />
+                <h:commandButton value="Log In" action="#{Welcome_Backing.login}" />
 
             </h:panelGrid>
         </h:form--%>

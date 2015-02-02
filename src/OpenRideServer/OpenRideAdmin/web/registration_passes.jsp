@@ -31,24 +31,24 @@
     <jsp:include page="/WEB-INF/jspf/header.jsp"><jsp:param name="section" value="regpasses" /></jsp:include>
 
     <h:form id="logoutForm">
-        <div style="float: right; margin-top: 4px;"><h:commandLink action="#{Welcome_Backing.logout}" immediate="true"><h:outputText value="Ausloggen" /></h:commandLink></div>
+        <div style="float: right; margin-top: 4px;"><h:commandLink action="#{Welcome_Backing.logout}" immediate="true"><h:outputText value="log out" /></h:commandLink></div>
         <h1><h1>RegistrationPass-Generator</h1></h1>
     </h:form>
 
     <h:form id="form">
 
         <f:verbatim><fieldset>
-                <legend>1. Schritt: Parameter festlegen</legend></f:verbatim>
+                <legend>1. Set the parameters</legend></f:verbatim>
 
                 <div  style="padding: 10px 15px;">
 
                     <table>
                         <tr>
                             <td>
-                            <h:outputLabel value="Anzahl: *" for="passCount" />
+                            <h:outputLabel value="Add to Cart: *" for="passCount" />
                         </td>
                         <td>
-                            <h:inputText id="passCount" value="#{RegistrationPasses_Backing.passCount}" required="true" requiredMessage="Bitte trage etwas in dieses Feld ein.">
+                            <h:inputText id="passCount" value="#{RegistrationPasses_Backing.passCount}" required="true" requiredMessage="Please enter anything in this field.">
                                 <f:validateDoubleRange minimum="1"  />
                             </h:inputText>
                         </td>
@@ -58,10 +58,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <h:outputLabel value="Länge: *" for="passLength" />
+                            <h:outputLabel value="long:*" for="passLength" />
                         </td>
                         <td>
-                            <h:inputText id="passLength" value="#{RegistrationPasses_Backing.passLength}" required="true" requiredMessage="Bitte trage etwas in dieses Feld ein.">
+                            <h:inputText id="passLength" value="#{RegistrationPasses_Backing.passLength}" required="true" requiredMessage="Please enter anything in this field.">
                                 <f:validateDoubleRange minimum="1" />
                             </h:inputText>
                         </td>
@@ -82,7 +82,7 @@
                     </tr>
                 </table>
 
-                <h:commandButton value="Beispiel-Codes generieren" action="#{RegistrationPasses_Backing.generate}" />
+                <h:commandButton value="Generate code examples" action="#{RegistrationPasses_Backing.generate}" />
 
                 <h:dataTable id="dt1" value="#{RegistrationPasses_Backing.passes}" var="pass">
 
@@ -97,11 +97,11 @@
             <f:verbatim></fieldset></f:verbatim>
 
         <f:verbatim><fieldset>
-                <legend>2. Schritt: Persistierung</legend></f:verbatim>
+                <legend>2.  Schritt: Persistierung<</legend></f:verbatim>
 
                 <div  style="padding: 10px 15px;">
 
-                <h:commandButton value="Codes nach diesem Schema persistieren" action="#{RegistrationPasses_Backing.persist}" />
+                <h:commandButton value="Persist code according to this scheme" action="#{RegistrationPasses_Backing.persist}" />
 
                 <h:dataTable id="dt2" value="#{RegistrationPasses_Backing.persistedPasses}" var="pass">
 
